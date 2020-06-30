@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+.body-color {
+  background-color: black;
+}
+
+@keyframes onLoadContainer {
+  0% {
+    background-color: #99d8d0;
+    display: none;
+    box-shadow: none;
+  }
+  50% {
+    background-color: #99d8d0;
+    box-shadow: none;
+  }
+  100% {
+    background-color: #363636;
+  }
+}
+
+@keyframes onLoadText {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+body {
+  background-color: #99d8d0;
+  font-family: "Muli", sans-serif;
+}
+
+/* Containers */
+
+.container {
+  margin: auto;
+  background-color: #363636;
+  width: 80%;
+  border-radius: 0.5em;
+  box-shadow: 0px 23px 0px 0px rgb(26, 26, 26);
+  animation: 1s ease-in-out 0s 1 onLoadContainer;
+}
+
+.sidebar {
+  float: right;
+  height: auto !important;
+}
+
+/* Children */
+
+.container > div {
+  padding: 15px;
+  cursor: default;
+  transition: color 0.75s;
+  animation: 1s ease-in-out 0s 1 onLoadText;
+}
+
+.name {
+  width: 292px;
+  color: #99d8d0;
+  font-size: 8.5rem;
+  text-align: left;
+  font-weight: bolder;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, #9bd3cb 55%);
+  animation: 1s ease-in-out 0s 1 onLoad;
+}
+
+.definition {
+  width: max-content;
+  margin-top: 10px;
+  color: #99d8d0;
+  margin-top: 0rem !important;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.github-top {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 0.5rem;
+  background-color: #99d8d0;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
+.github-bottom {
+  display: none;
+  position: relative;
+  bottom: 110px;
+  right: 60px;
+  float: right;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 0.5rem;
+  background-color: #99d8d0;
+  transition: background-color 1s;
+  cursor: pointer;
+  animation: 1s ease-in-out 0s 1 onLoadText;
+}
+
+/* Images */
+
+.github-img {
+  width: 50px;
+}
+
+/* Hovers */
+
+.container > div:hover {
+  color: #ffbcbc;
+}
+
+.name:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, #ffbcbc 55%);
+}
+
+.github-top:hover {
+  background-color: #ffbcbc;
+}
+
+.github-bottom:hover {
+  background-color: #ffbcbc;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 800px) {
+  .name {
+    font-size: 8rem;
+  }
+  .definition {
+    font-size: 2rem;
+  }
+
+  .sidebar > div {
+    height: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    width: 200px;
+    font-size: 7rem;
+  }
+
+  .github-top {
+    display: none;
+  }
+
+  .github-bottom {
+    display: block;
+  }
+
+  .github-img {
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .name {
+    width: 150px;
+    font-size: 6rem;
+  }
+
+  .github-top {
+    display: none;
+  }
+
+  .github-bottom {
+    display: block;
+    bottom: 100px;
+    right: 40px;
+  }
+
+  .github-img {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .name {
+    width: 125px;
+    font-size: 5.5rem;
+  }
+
+  .github-top {
+    display: none;
+  }
+
+  .github-bottom {
+    display: block;
+    bottom: 100px;
+    right: 30px;
+  }
+
+  .github-img {
+    width: 15px;
+  }
+}
