@@ -147,6 +147,10 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 10px;
+  }
+
   .name {
     width: 200px;
     font-size: 7rem;
