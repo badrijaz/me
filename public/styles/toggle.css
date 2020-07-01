@@ -37,6 +37,10 @@
   transition: 0.4s;
 }
 
+.slider:hover:before {
+  background-color: #ffbcbc;
+}
+
 input:checked + .slider {
   background-color: rgb(26, 26, 26);
 }
@@ -45,6 +49,12 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+
+  background-color: #ffbcbc;
+}
+
+input:checked + .slider:hover:before {
+  background-color: #99d8d0;
 }
 
 /* Rounded sliders */
@@ -54,16 +64,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-/* Moon */
-
-.moon {
-  position: relative;
-  filter: invert(19%) sepia(6%) saturate(3%) hue-rotate(343deg) brightness(94%)
-    contrast(89%);
-  left: 60px;
-  bottom: 11px;
-  width: 85%;
-  transition: opacity 2s;
 }
