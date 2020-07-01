@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
-      href="https://image.flaticon.com/icons/svg/3075/3075404.svg"
+      href="./images/badr.svg"
       type="image/gif"
-      sizes="16x16"
     />
-    <!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
+
     <script>
-    
+
       let toggle = false;
 
       myFunction = () => {
+
         toggle = !toggle
 
         var bodyElement = document.getElementsByTagName("body")[0];
@@ -29,11 +29,11 @@
         if(toggle) {
           for(element of elements) 
             element.classList.add(element.classList[0] + "-dark")
-          document.getElementsByClassName("moon")[0].style.opacity = "0";
+          
         } else {
-            for(element of elements) 
+            for(element of elements)
             element.classList.remove(element.classList[0] + "-dark")
-          document.getElementsByClassName("moon")[0].style.opacity = "1";
+        
         }
       }
 
@@ -53,7 +53,6 @@
   <body class="body">
     <div class="load">
       <label class="switch">
-        <img class="moon" src="https://img.icons8.com/pastel-glyph/100/000000/moon-satellite.png"/>
         <input type="checkbox" onclick="myFunction()"/>
         <span class="slider round"></span>
       </label>
