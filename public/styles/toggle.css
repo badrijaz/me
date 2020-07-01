@@ -38,11 +38,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  background-color: rgb(26, 26, 26);
 }
 
 input:checked + .slider:before {
@@ -58,4 +54,16 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Moon */
+
+.moon {
+  position: relative;
+  filter: invert(19%) sepia(6%) saturate(3%) hue-rotate(343deg) brightness(94%)
+    contrast(89%);
+  left: 60px;
+  bottom: 11px;
+  width: 85%;
+  transition: opacity 2s;
 }

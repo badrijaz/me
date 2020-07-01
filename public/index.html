@@ -3,48 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://image.flaticon.com/icons/png/512/1076/1076744.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="./styles/app.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/toggle.css" />
-    <title>hi, its me</title>
+    <link
+      rel="icon"
+      href="https://image.flaticon.com/icons/svg/3075/3075404.svg"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
+    <script>
+    
+      let toggle = false;
+
+      myFunction = () => {
+        toggle = !toggle
+
+        var bodyElement = document.getElementsByTagName("body")[0];
+        var containerElement = document.getElementsByClassName("container")[0];
+        var nameElement = document.getElementsByClassName("name")[0];
+        var defElement = document.getElementsByClassName("definition")[0];
+        var githubTop = document.getElementsByClassName("github-top")[0];
+        var githubBottom = document.getElementsByClassName("github-bottom")[0];
+
+        var elements = [ bodyElement, containerElement, nameElement, defElement, githubTop, githubBottom ]
+        
+        if(toggle) {
+          for(element of elements) 
+            element.classList.add(element.classList[0] + "-dark")
+          document.getElementsByClassName("moon")[0].style.opacity = "0";
+        } else {
+            for(element of elements) 
+            element.classList.remove(element.classList[0] + "-dark")
+          document.getElementsByClassName("moon")[0].style.opacity = "1";
+        }
+      }
+
+    </script>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+    
+    <link rel="stylesheet"  href="./styles/app.css" />
+    <link rel="stylesheet"  href="./styles/dark.css" />
+    <link rel="stylesheet"  href="./styles/toggle.css" />
+    <title>hi, mein aik akloti site</title>
   </head>
-  <main id="app"></main>
-    <body></body>
-      <div class="load">
-        <label  class="switch">
-          <input  type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-        <div class="container">
-          <div class="sidebar">
-            <div class="github-top">
-              <a href="https://github.com/itsbadr" target="_blank">
-                <img class="github-img" src="./images/github.png" />
-              </a>
-            </div>
-          </div>
-          <div class="name">Badr</div>
-          <div class="definition">
-            <span style="font-weight: bold;">19</span> · Lahore
+  <body class="body">
+    <div class="load">
+      <label class="switch">
+        <img class="moon" src="https://img.icons8.com/pastel-glyph/100/000000/moon-satellite.png"/>
+        <input type="checkbox" onclick="myFunction()"/>
+        <span class="slider round"></span>
+      </label>
+      <div class="container">
+        <div class="sidebar">
+          <div class="github-top">
+            <a href="https://github.com/itsbadr" target="_blank">
+              <img class="github-img" src="./images/github.png" />
+            </a>
           </div>
         </div>
-        <div class="github-bottom">
-          <a href="https://github.com/itsbadr" target="_blank">
-            <img class="github-img" src="./images/github.png" />
-          </a>
+        <div class="name">Badr</div>
+        <div class="definition">
+          <span style="font-weight: bold;">19</span> · Lahore
         </div>
-        <div class="container"></div>
+      </div> 
+      <div class="github-bottom">
+        <a href="https://github.com/itsbadr" target="_blank">
+          <img class="github-img" src="./images/github.png" />
+        </a>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-      <script src="./scripts/app.js"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.15.5/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-    </body>
+    </div>
+  </body>
 </html>

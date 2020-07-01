@@ -1,0 +1,41 @@
+.body-dark {
+  background-color: #363636;
+  transition: background-color ease-in-out 0.5s;
+}
+
+.container-dark {
+  box-shadow: 0px 23px 0px 0px rgb(26, 26, 26);
+}
+
+.container-dark > div:hover {
+  color: #99d8d0;
+}
+
+.name-dark {
+  color: #ffbcbc;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, #ffbcbc 55%);
+}
+
+.github-top-dark {
+  background-color: #ffbcbc;
+}
+
+.github-bottom-dark {
+  background-color: #ffbcbc;
+}
+
+.name-dark:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, #99d8d0 55%);
+}
+
+.definition-dark {
+  color: #ffbcbc;
+}
+
+.github-top-dark:hover {
+  background-color: #99d8d0;
+}
+
+.github-bottom-dark:hover {
+  background-color: #99d8d0;
+}

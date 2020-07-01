@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
-.body-color {
-  background-color: black;
-}
-
 @keyframes onLoadContainer {
   0% {
     background-color: #99d8d0;
@@ -37,6 +33,7 @@
 body {
   background-color: #99d8d0;
   font-family: "Muli", sans-serif;
+  transition: background-color ease-in-out 0.5s;
 }
 
 /* Containers */
