@@ -1,0 +1,160 @@
+/* Nuvem */
+
+@keyframes loop {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#clouds {
+  left: 0%;
+  transition: left;
+  animation: loop 60s infinite ease-in-out;
+}
+
+.nuvem {
+  margin-top: 70px;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  position: relative;
+  transition: background 1s;
+}
+
+.nuvem:after {
+  content: "";
+  width: 80px;
+  height: 90px;
+  background: #fff;
+  border-radius: 200px 200px 0 0;
+  -moz-border-radius: 200px 200px 0 0;
+  -webkit-border-radius: 200px 200px 0 0;
+  top: -30px;
+  left: 35px;
+  position: absolute;
+  transition: background 1s;
+}
+
+.nuvem:before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200x;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  top: -10px;
+  left: 80px;
+  position: absolute;
+  transition: background 1s;
+}
+
+/* Cloud */
+
+.cloud {
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  position: relative;
+  top: 20px;
+}
+
+.cloud:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  top: -40px;
+  left: 50px;
+  position: absolute;
+}
+
+.cloud:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200x;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  top: -20px;
+  left: 20px;
+  position: absolute;
+}
+
+/* bCloud */
+
+.bcloud {
+  margin: 50px 0;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  position: relative;
+  transition: background 1s;
+}
+
+.bcloud:after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 200px 200px 200px 0;
+  -moz-border-radius: 200px 200px 200px 0;
+  -webkit-border-radius: 200px 200px 200px 0;
+  top: -20px;
+  left: 45px;
+  position: absolute;
+  transition: background 1s;
+}
+
+/* Hovers */
+
+.nuvem:hover {
+  background: var(--main-pink-color);
+}
+
+.nuvem:hover:after {
+  background: var(--main-pink-color);
+}
+
+.nuvem:hover:before {
+  background: var(--main-pink-color);
+}
+
+.bcloud:hover {
+  background: var(--main-pink-color);
+}
+
+.bcloud:hover:after {
+  background: var(--main-pink-color);
+}
+
+.cloud:hover {
+  background: var(--main-pink-color);
+}
+
+.cloud:hover:before {
+  background: var(--main-pink-color);
+}
+
+.cloud:hover:after {
+  background: var(--main-pink-color);
+}

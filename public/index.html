@@ -8,7 +8,13 @@
       href="./images/badr.svg"
       type="image/gif"
     />
-
+    <style>
+      :root {
+        --main-light-color: #d0ddff;
+        --main-pink-color: #fda5a5;
+      }
+    </style>
+    
     <script>
 
       let toggle = false;
@@ -48,10 +54,11 @@
     <link rel="stylesheet"  href="./styles/app.css" />
     <link rel="stylesheet"  href="./styles/dark.css" />
     <link rel="stylesheet"  href="./styles/toggle.css" />
+    <link rel="stylesheet"  href="./styles/cloud.css" />
     <title>hi, mein aik akloti site</title>
   </head>
   <body class="body">
-    <div class="load">
+    <div id="load" class="load">
       <label class="switch">
         <input type="checkbox" onclick="myFunction()"/>
         <span class="slider round"></span>
@@ -74,6 +81,18 @@
           <img class="github-img" src="./images/github.png" />
         </a>
       </div>
-    </div>
+      <div id="clouds" style="position: fixed; z-index: -1; bottom: 30%">
+        <div class="nuvem" style="position: absolute; bottom: 500px; right: 930px;"></div>
+        <div class="cloud" style="position: absolute; top: 0px; left: 890px;"></div>
+        <div class="nuvem" style="left: 400px; bottom: -20px;"></div>
+        <div class="bcloud" style="right: 300px;"></div>
+        <div class="cloud"></div>
+        <div class="cloud" style="position: absolute; top: 50px; right: 500px;"></div>
+        <div class="bcloud" style="position: absolute; top: 50px; right: 1000px;"></div>
+        <div class="bcloud" style="position: absolute; top: 50px; left: 1000px;"></div>
+        <div class="nuvem" style="position: absolute; bottom: 30px; left: 1500px;"></div>
+        
+      </div>
+  </div>
   </body>
 </html>

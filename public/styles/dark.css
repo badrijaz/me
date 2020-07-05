@@ -8,7 +8,7 @@
 }
 
 .container-dark > div:hover {
-  color: #99d8d0;
+  color: var(--main-light-color);
 }
 
 .name-dark {
@@ -25,7 +25,10 @@
 }
 
 .name-dark:hover {
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, #99d8d0 55%);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0) 90%,
+    var(--main-light-color) 55%
+  );
 }
 
 .definition-dark {
@@ -33,9 +36,9 @@
 }
 
 .github-top-dark:hover {
-  background-color: #99d8d0;
+  background-color: var(--main-light-color);
 }
 
 .github-bottom-dark:hover {
-  background-color: #99d8d0;
+  background-color: var(--main-light-color);
 }
