@@ -1,0 +1,76 @@
+/* 
+
+
+Projects 
+
+
+*/
+.projects {
+    margin-top: 3vh;
+}
+
+.project-title {
+    font-family: 'Avenir Regular';
+    font-size: 20px;
+    color: var(--main-aqua);
+    transition: color .2s ease-in-out;
+}
+
+/* Azure Locket Steve */
+.azure, .locket, .steve {
+    background-color: rgb(20, 30, 44);
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+
+    margin: 10px;
+    border-radius: 5px;
+    border: solid 1px rgb(92, 96, 107);
+    transition: background-color .1s ease-in-out, border .1s ease-in-out;
+    cursor: pointer;
+}
+
+.project-text {
+    font-family: 'Avenir Black';
+    text-align: left;
+    color: var(--main-aqua);
+
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.icon {
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    transition: width .1s ease-in-out, height .1s ease-in-out, transform .1s ease-in-out;
+}
+
+.email-icon:hover, .github-icon:hover {
+    transform: translateY(-5px);
+}
+
+.azure:hover {
+    background-color: rgb(30, 44, 65);
+    border: solid 1px var(--main-aqua);
+}
+
+.locket:hover {
+    background-color: #41411e;
+    border: solid 1px #fdfd02;
+}
+
+.steve:hover {
+    background-color: rgb(42, 34, 19);
+    border: solid 1px #ff7e15;
+}
+
+
+.locket:hover > img, .azure:hover > img, .steve:hover > img {
+    transform: translate(5px, -5px);
+}
