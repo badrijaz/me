@@ -97,6 +97,7 @@ Introduction
 .line > img {
     height: 300px;
     width: 15px;
+    transition: height .1s ease-in-out;
 }
 
 /* Waves */
