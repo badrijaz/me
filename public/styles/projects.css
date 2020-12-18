@@ -10,7 +10,7 @@ Projects
 }
 
 .project-title {
-    font-family: 'Avenir Regular';
+    font-family: 'Avenir Black';
     font-size: 20px;
     color: var(--main-aqua);
     transition: color .2s ease-in-out;
