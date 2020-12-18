@@ -103,8 +103,12 @@ Introduction
 /* Waves */
 .waves > svg {
     position: absolute;
-    z-index: -1;
     bottom: 0;
+}
+
+.wave-front-path {
+    fill: rgb(76, 201, 223);
+    transition: fill .2s ease-in-out;
 }
 
 /* Hovers */
