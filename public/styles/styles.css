@@ -30,6 +30,7 @@ a { text-decoration: none; }
 
 
     border-bottom: solid 2px rgb(51, 145, 148);
+    transition: border-bottom .2s ease-in-out;
 }
 
 /* 
@@ -101,6 +102,10 @@ Introduction
 }
 
 /* Waves */
+.waves {
+    z-index: -1;
+}
+
 .waves > svg {
     position: absolute;
     bottom: 0;
