@@ -1,89 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/projects.css" />
-    <link rel="stylesheet" href="styles/queries.css" />
-    <link rel="icon" href="./images/badr.svg" type="image/gif" />
-    <title>Badr</title>
-    <script defer src="scripts/projectTitle.js"></script>
-</head>
-
-<body>
-    <div class="top-container">
-        <div class="introduction">
-            <h1 class="name">badr</h1>
-            <h3 class="name-b">20 · Lahore</h3>
-            <div>
-                <a href="mailto:badrijaz42@gmail.com">
-                    <img class="email-icon" src="./images/email.svg" alt="email-icon">
-                </a>
-                <a href="https://github.com/itsbadr" target="_blank">
-                    <img class="github-icon" src="./images/github.png" alt="github-icon">
-                </a>
-            </div>
-        </div>
-        <div class="line">
-            <img src="./images/line.png" alt="line">
-        </div>
-        <div class="projects">
-            <h1 class="project-title">repositories</h1>
-            <div>
-                <div class="azure" onmouseover="projectTitle('azure')">
-                    <div>
-                        <h4 class="project-text">voice_chap</h4>
-                        <a href="https://github.com/itsbadr/voice_chap" target="_blank">
-                            <h4 style="text-decoration: underline;" class="project-text">
-                                <code>Voice bot for Discord</code>
-                            </h4>
-                        </a>
-                    </div>
-                    <img class="icon" src="./images/speaker.svg" alt="speaker">
-                </div>
-            </div>
-            <div>
-                <div class="locket" onmouseover="projectTitle('locket')" onmouseout="resetProjectTitle()">
-                    <div>
-                        <h4 style="color: #e8e613" class="project-text">locket</h4>
-                        <a href="https://github.com/itsbadr/locket" target="_blank">
-                            <h4 style="color: #e8e613; text-decoration: underline;" class="project-text">
-                                <code>Web app for encryption</code>
-                            </h4>
-                        </a>
-                    </div>
-                    <img class="icon" src="./images/lock.svg" alt="lock">
-                </div>
-            </div>
-            <div>
-                <div class="steve" onmouseover="projectTitle('steve')" onmouseout="resetProjectTitle()">
-                    <div>
-                        <h4 style="color: #ff7e15" class="project-text">Steve</h4>
-                        <a href="https://github.com/itsbadr/Steve" target="_blank">
-                            <h4 style="color: #ff7e15; text-decoration: underline;" class="project-text">
-                                <code>Minecraft minigame mod</code>
-                            </h4>
-                        </a>
-                    </div>
-                    <img class="icon" src="./images/block.svg" alt="lock">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="waves">
-        <svg style="bottom: 2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#339194" fill-opacity="1" class="wave-front-path"
-                d="M0,128L48,117.3C96,107,192,85,288,106.7C384,128,480,192,576,213.3C672,235,768,213,864,176C960,139,1056,85,1152,58.7C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>badr</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="prefetch"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_bRAFIGrixPx3osSqeg3Pr");
+      })();
+    </script>
+    <script defer src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li id="about" onclick="navigate(this)" class="link active">
+          <p>about</p>
+        </li>
+        <li id="projects" onclick="navigate(this)" class="link">
+          <p>projects</p>
+        </li>
+        <li id="contact" onclick="navigate(this)" class="link">
+          <p>contact</p>
+        </li>
+      </ul>
+    </nav>
+    <main class="about">
+      <div class="intro">
+        <svg id="signature" class="signature">
+          <use xlink:href="./images/signature.svg#signature" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave-back-svg">
-            <path fill="#141e2c" fill-opacity="1" class="wave-back-path"
-                d="M0,128L48,117.3C96,107,192,85,288,106.7C384,128,480,192,576,213.3C672,235,768,213,864,176C960,139,1056,85,1152,58.7C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-    </div>
-</body>
+        <h1>badr</h1>
+        <p>hi, im a CS student hanging by a thread ~.</p>
+      </div>
+      <a target="_blank" href="https://github.com/itsbadr">
+        <img class="github" width="50" height="50" src="./images/github.svg" />
+      </a>
+    </main>
+    <section class="projects">
+      <div>
+        <a href="https://github.com/azure-badr/maaldar" target="_blank">
+          <div class="project">
+            <h1>Maaldar</h1>
+            <img class="link" src="./images/link.svg" />
+            <p>
+              a discord bot that gives nitro boosters for your server members a
+              custom identity.
+            </p>
+          </div>
+        </a>
+        <a href="https://github.com/itsbadr/homenet" target="_blank">
+          <div class="project">
+            <h1>HomeNet</h1>
+            <img class="link" src="./images/link.svg" />
+            <p>
+              an android application that switches from data to wifi at your set
+              locations, on your choice.
+            </p>
+          </div>
+        </a>
+        <a href="https://github.com/azure-badr/sadaa" target="_blank">
+          <div class="project">
+            <h1>Sadaa</h1>
+            <img class="link" src="./images/link.svg" />
+            <p>A discord bot for managing custom voice channels.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact-form">
+        <form>
+          <div class="form-input">
+            <label for="name">name</label>
+            <input
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              id="name"
+              name="name"
+            />
+          </div>
+          <div class="form-input">
+            <label for="email">email</label>
+            <input
+              type="email"
+              autocomplete="off"
+              spellcheck="false"
+              id="email"
+              name="email"
+            />
+          </div>
+          <div class="form-input">
+            <label for="message">message</label>
+            <textarea
+              type="textarea"
+              autocomplete="off"
+              minlength="5"
+              id="message"
+              rows="10"
+              name="message"
+            ></textarea>
+          </div>
+          <input type="submit" class="form-button" value="send" />
+        </form>
+        <div class="sent"></div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const signature = document.querySelector(".signature");
+    const observer = new IntersectionObserver(callback, {
+      threshold: 0.1,
+    });
 
+    function callback(entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          signature.style.display = "block";
+          return;
+        }
+
+        signature.style.display = "none";
+      });
+    }
+
+    observer.observe(document.querySelector(".intro"));
+  </script>
 </html>

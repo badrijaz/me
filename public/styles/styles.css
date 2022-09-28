@@ -1,124 +1,130 @@
 :root {
-    --main-dark-blue: rgb(16, 23, 34);
-    --main-aqua: rgb(76, 201, 223);
-}
-
-@font-face {
-    font-family: 'Avenir Black';
-    src: url("./Avenir-Black.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Avenir Regular';
-    src: url("./Avenir-Regular.otf") format("opentype");
-}
-
-body {
-    background-color: var(--main-dark-blue);
+    --color-background: hsl(200, 68%, 92%);
+    --color-text-selected: hsl(201, 69%, 40%);
+    --color-text-primary: hsl(201, 42%, 50%);
+    --color-text-secondary: hsl(201, 44%, 61%);
+    --color-text-background: hsl(204, 53%, 90%);
+    --accent-text-primary: hsl(30, 69%, 40%);
+    --accent-background: hsl(30, 68%, 92%);
+    --input-background: hsl(201, 70%, 85%);
+    --input-background-focus: hsl(201, 70%, 75%);
+    --input-text: hsl(201, 82%, 7%);
+    --curve: cubic-bezier(0.42, 0, 0.01, 1);
+  }
+  
+  * {
     margin: 0;
-}
-
-a { text-decoration: none; }
-
-/* Top container */
-.top-container {
-    background-color: rgb(20, 30, 44);
-
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    overflow: hidden;
+    animation: body-animation 500ms ease-in-out;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    color: var(--color-text-primary);
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 2rem;
+  }
+  
+  /* Nav */
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    transform: translateX(200%);
+    animation: 500ms var(--curve) nav-slide-in forwards;
+    z-index: 2;
+  }
+  
+  @keyframes nav-slide-in {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  nav > ul {
     display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 3vh;
-
-
-    border-bottom: solid 2px rgb(51, 145, 148);
-    transition: border-bottom .2s ease-in-out;
-}
-
-/* 
-
-
-Introduction 
-
-
-*/
-.introduction {
-    margin-top: 5vh;
-}
-
-/* Name */
-.name {
-    font-family: 'Avenir Black';
-    font-size: 100px;
-    line-height: 85px;
-    color: var(--main-aqua);
-
-    margin: 0;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.name-b {
-    font-family: 'Avenir Regular';
-    font-size: 20px;
-    color: var(--main-aqua);
-
-    max-width: max-content;
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 5px;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-/* Icons */
-.email-icon {
-    width: 35px;
-    margin-top: 10px;
-    margin-left: 5px;
-    
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.github-icon {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .link {
     position: relative;
-    bottom: 2px;
-    width: 35px;
-    margin-left: 5px;
-    
-    transition: transform 0.2s ease-in-out;
+    color: var(--color-text-primary);
+    text-align: right;
     cursor: pointer;
-}
-
-/* Line */
-
-.line {
+    transition: color 100ms ease-in-out;
+  }
+  
+  .link:active {
+    background-color: transparent;
+  }
+  
+  .link:hover {
+    color: var(--color-text-selected);
+  }
+  
+  .link.active > p {
+    font-weight: bold;
+    color: var(--color-text-selected);
+  }
+  
+  .link.active::before {
+    content: "";
     position: absolute;
-    margin-top: 40px;
-    right: calc(54%);
-}
-
-.line > img {
-    height: 300px;
-    width: 15px;
-    transition: height .1s ease-in-out;
-}
-
-/* Waves */
-.waves {
-    z-index: -1;
-}
-
-.waves > svg {
-    position: absolute;
-    bottom: 0;
-}
-
-.wave-front-path {
-    fill: rgb(76, 201, 223);
-    transition: fill .2s ease-in-out;
-}
-
-/* Hovers */
-.name:hover, .name-b:hover {
-    background-color: rgb(30, 41, 58);
-    box-shadow: 0px 2px 0px 0px var(--main-aqua);
-}
-
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background-color: var(--color-text-selected);
+    animation: active-navigation 500ms var(--curve) forwards;
+  }
+  
+  @media (max-width: 300px) {
+    .signature {
+      top: 2rem;
+      position: relative;
+      scale: 1.4;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .link p {
+      font-size: 1.5rem;
+    }
+  
+    .link.active::before {
+      width: 8px;
+      height: 8px;
+      right: -10px;
+    }
+  }
+  
