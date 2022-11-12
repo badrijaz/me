@@ -1,3 +1,8 @@
+:root {
+  --input-border-top-light: #93c7e3;
+  --input-border-top-dark: #3f93c0; 
+}
+
 .contact {
     display: flex;
     height: 100vh;
@@ -42,9 +47,12 @@
     margin-top: 0.5rem;
     border-radius: 0.8rem;
     width: clamp(15rem, 55vw, 65vw);
+    border-style: inset;
     border: none;
+    border-top: 2px solid var(--input-border-top-light);
     outline: none;
     transition: background-color 200ms ease-out;
+    resize: none;
   }
   
   .form-input:has(:where(input, textarea):focus) label {
@@ -53,6 +61,7 @@
   }
   
   .form-input :where(input, textarea):focus {
+    border-top: 2px solid var(--input-border-top-dark);
     background-color: var(--input-background-focus);
   }
   
