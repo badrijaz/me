@@ -130,4 +130,14 @@
       height: 0%;
     }
   }
-  
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%
+  }
+
+  .form-input > * {
+    width: auto;
+  }
+}
