@@ -1,6 +1,6 @@
 :root {
   --input-border-top-light: #93c7e3;
-  --input-border-top-dark: #3f93c0; 
+  --input-border-top-dark: #3f93c0;
 }
 
 .contact {
@@ -75,11 +75,11 @@
   border-radius: 0.7rem;
   color: var(--color-text-primary);
   background-color: var(--input-background);
+  border-style: inset;
   border: none;
+  border-top: 2px solid var(--input-border-top-light);
   cursor: pointer;
-  transition: 
-    background-color 200ms ease-out, 
-    color 200ms ease-out,
+  transition: background-color 200ms ease-out, color 200ms ease-out,
     padding 200ms var(--curve);
 }
 
@@ -95,9 +95,11 @@
 @keyframes changing-color {
   0% {
     background-color: var(--input-background-focus);
-  } 50% {
+  }
+  50% {
     background-color: var(--input-background);
-  } 100% {
+  }
+  100% {
     background-color: var(--color-backgrorund);
   }
 }
@@ -120,10 +122,12 @@
   0% {
     width: 0%;
     height: 0%;
-  } 50% {
+  }
+  50% {
     width: 100%;
     height: 100%;
-  } 100% {
+  }
+  100% {
     width: 0%;
     height: 0%;
   }
@@ -131,9 +135,9 @@
 
 @media (max-width: 768px) {
   .contact-form {
-    width: 90%
+    width: 90%;
   }
-  
+
   .form-input > * {
     width: auto;
   }
