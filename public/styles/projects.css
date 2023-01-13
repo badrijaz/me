@@ -1,49 +1,49 @@
 .projects {
-    --project-hover-background: hsl(199, 68%, 90%);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-100%);
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: var(--color-background);
-  }
-  
-  .project {
-    padding: 0 1rem;
-    margin-top: 1rem;
-    border-radius: 1rem;
-    transition: background-color 100ms var(--curve);
-  }
-  
-  .project:hover {
-    background-color: var(--project-hover-background);
-  }
-  
-  .project > img {
-    margin-left: 0.5rem;
-    width: 1.5rem;
-  }
-  
-  .project > h1 {
-    display: inline-block;
-    font-size: 1.8rem;
-  }
-  
-  .project > p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    color: var(--color-text-secondary);
-  }
-  
-  .projects.active {
-    animation: slide-in 500ms var(--curve) forwards;
-  }
-  
-  .projects.hidden {
-    animation: slide-out 500ms var(--curve) forwards;
-  }
-  
+  --project-background: hsl(199, 68%, 90%);
+  --project-hover-background: hsl(199, 66%, 86%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.project {
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: var(--project-background);
+  transition: background-color 200ms ease-out;
+}
+
+.project:hover {
+  background-color: var(--project-hover-background);
+}
+
+.project > img {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+}
+
+.project > h1 {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+.project > p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.projects.active {
+  animation: slide-in 500ms var(--curve) forwards;
+}
+
+.projects.hidden {
+  animation: slide-out 500ms var(--curve) forwards;
+}

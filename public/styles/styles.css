@@ -1,130 +1,130 @@
 :root {
-    --color-background: hsl(200, 68%, 92%);
-    --color-text-selected: hsl(201, 69%, 40%);
-    --color-text-primary: hsl(201, 42%, 50%);
-    --color-text-secondary: hsl(201, 44%, 61%);
-    --color-text-background: hsl(204, 53%, 90%);
-    --accent-text-primary: hsl(30, 69%, 40%);
-    --accent-background: hsl(30, 68%, 92%);
-    --input-background: hsl(201, 70%, 85%);
-    --input-background-focus: hsl(201, 70%, 75%);
-    --input-text: hsl(201, 82%, 7%);
-    --curve: cubic-bezier(0.42, 0, 0.01, 1);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  body {
-    background-color: var(--color-background);
-    overflow: hidden;
-    animation: body-animation 500ms ease-in-out;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  h1 {
-    font-size: 5rem;
-    color: var(--color-text-primary);
-  }
-  
-  h2 {
-    font-size: 3.5rem;
-    font-weight: bold;
-  }
-  
-  p {
-    font-size: 2rem;
-  }
-  
-  /* Nav */
-  nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 2rem;
-    margin-right: 2rem;
+  --color-background: hsl(200, 68%, 92%);
+  --color-text-selected: hsl(201, 69%, 40%);
+  --color-text-primary: hsl(201, 42%, 50%);
+  --color-text-secondary: hsl(201, 44%, 61%);
+  --color-text-background: hsl(204, 53%, 90%);
+  --color-text-misc: hsl(200, 18%, 93%);
+  --accent-text-primary: hsl(30, 69%, 40%);
+  --accent-background: hsl(30, 68%, 92%);
+  --input-background: hsl(201, 70%, 85%);
+  --input-background-focus: hsl(201, 70%, 75%);
+  --input-text: hsl(201, 82%, 7%);
+  --curve: cubic-bezier(0.42, 0, 0.01, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--color-background);
+  overflow: hidden;
+  animation: body-animation 500ms ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--color-text-primary);
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2rem;
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  transform: translateX(200%);
+  animation: 500ms var(--curve) nav-slide-in forwards;
+  z-index: 2;
+}
+
+@keyframes nav-slide-in {
+  0% {
     transform: translateX(200%);
-    animation: 500ms var(--curve) nav-slide-in forwards;
-    z-index: 2;
   }
-  
-  @keyframes nav-slide-in {
-    0% {
-      transform: translateX(200%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
-  
-  nav > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  
-  .link {
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.link {
+  position: relative;
+  color: var(--color-text-primary);
+  text-align: right;
+  cursor: pointer;
+  transition: color 100ms ease-in-out;
+}
+
+.link:active {
+  background-color: transparent;
+}
+
+.link:hover {
+  color: var(--color-text-selected);
+}
+
+.link.active > p {
+  font-weight: bold;
+  color: var(--color-text-selected);
+}
+
+.link.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: var(--color-text-selected);
+  animation: active-navigation 500ms var(--curve) forwards;
+}
+
+@media (max-width: 300px) {
+  .signature {
+    top: 2rem;
     position: relative;
-    color: var(--color-text-primary);
-    text-align: right;
-    cursor: pointer;
-    transition: color 100ms ease-in-out;
+    scale: 1.4;
   }
-  
-  .link:active {
-    background-color: transparent;
+}
+
+@media (max-width: 460px) {
+  .link p {
+    font-size: 1.5rem;
   }
-  
-  .link:hover {
-    color: var(--color-text-selected);
-  }
-  
-  .link.active > p {
-    font-weight: bold;
-    color: var(--color-text-selected);
-  }
-  
+
   .link.active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    opacity: 0.5;
-    background-color: var(--color-text-selected);
-    animation: active-navigation 500ms var(--curve) forwards;
+    width: 8px;
+    height: 8px;
+    right: -10px;
   }
-  
-  @media (max-width: 300px) {
-    .signature {
-      top: 2rem;
-      position: relative;
-      scale: 1.4;
-    }
-  }
-  
-  @media (max-width: 460px) {
-    .link p {
-      font-size: 1.5rem;
-    }
-  
-    .link.active::before {
-      width: 8px;
-      height: 8px;
-      right: -10px;
-    }
-  }
-  
+}
