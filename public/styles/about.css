@@ -1,52 +1,51 @@
 .about {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    overflow: hidden; /* Because of the signature */
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--color-background);
-  }
-  
-  .about.active {
-    animation: about-appear 500ms var(--curve) forwards;
-  }
-  
-  .about.hidden {
-    animation: slide-out 500ms var(--curve) forwards;
-  }
-  
-  .intro p {
-    font-weight: 400;
-    color: var(--color-text-secondary);
-  }
-  
-  .intro {
-    position: relative;
-  }
-  
-  .signature {
-    position: absolute;
-    opacity: 0.15;
-    stroke-dasharray: 730;
-    width: 100%;
-    scale: 2;
-    animation: write-signature 5s ease-out forwards;
-  }
-  
-  .github {
-    position: absolute;
-    left: 0;
-    top: 2rem;
-    margin: 2rem;
-    cursor: pointer;
-    transition: scale 200ms var(--curve);
-    animation: about-appear 500ms var(--curve) forwards;
-  }
-  
-  .github:hover {
-    scale: 1.2;
-  }
-  
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden; /* Because of the signature */
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-background);
+}
+
+.about.active {
+  animation: about-appear 500ms var(--curve) forwards;
+}
+
+.about.hidden {
+  animation: slide-out 500ms var(--curve) forwards;
+}
+
+.intro p {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.intro {
+  position: relative;
+}
+
+.signature {
+  position: absolute;
+  opacity: 0.15;
+  stroke-dasharray: 730;
+  width: 100%;
+  scale: 2;
+  animation: write-signature 5s ease-out forwards;
+}
+
+.github {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  margin: 2rem;
+  cursor: pointer;
+  transition: scale 200ms var(--curve);
+  animation: about-appear 500ms var(--curve) forwards;
+}
+
+.github:hover {
+  scale: 1.2;
+}
