@@ -44,7 +44,7 @@
     </nav>
     <main class="about">
       <div class="intro">
-        <svg id="signature" class="signature">
+        <svg style="display: none" id="signature" class="signature">
           <use xlink:href="./images/signature.svg#signature" />
         </svg>
         <h1>badr</h1>
@@ -142,10 +142,15 @@
   </body>
   <script>
     const signature = document.querySelector(".signature");
-    const observer = new IntersectionObserver(callback, {
+    let observer;
+
+    signature.onload = () => {
+      signature.style.display = "block";
+    };
+
+    observer = new IntersectionObserver(callback, {
       threshold: 0.1,
     });
-
     function callback(entries) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -156,7 +161,6 @@
         signature.style.display = "none";
       });
     }
-
     observer.observe(document.querySelector(".intro"));
   </script>
 </html>

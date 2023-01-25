@@ -1,82 +1,85 @@
 /* Body appear animation */
 @keyframes body-animation {
-    0% {
-      background-color: azure;
-    }
-    100% {
-      background-color: var(--color-background);
-    }
+  0% {
+    background-color: azure;
   }
-  
-  /* Navigation */
-  @keyframes active-navigation {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+    background-color: var(--color-background);
   }
-  
-  /* Intro p and h1 popup */
-  :is(.intro) > :is(p, h1) {
-    animation: rise 2s ease-out;
+}
+
+/* Navigation */
+@keyframes active-navigation {
+  0% {
+    transform: scale(0);
   }
-  
-  @keyframes rise {
-    0% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: scale(1);
   }
-  
-  /* Animation for when about is displayed */
-  @keyframes about-appear {
-    0% {
-      opacity: 0;
-      transform: translateY(-20%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+/* Intro p and h1 popup */
+:is(.intro) > :is(p, h1) {
+  animation: rise 2s ease-out;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
   }
-  
-  /* Signature animation for the SVG */
-  @keyframes write-signature {
-    0% {
-      stroke-dashoffset: 46rem;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
+  50% {
+    opacity: 1;
   }
-  
-  @keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateY(0);
   }
-  
-  @keyframes slide-out {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
+}
+
+/* Animation for when about is displayed */
+@keyframes about-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Signature animation for the SVG */
+@keyframes write-signature {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 46rem;
+  }
+  25% {
+    opacity: 0.15;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
