@@ -5,6 +5,7 @@
 
 .contact {
   display: flex;
+  height: 100dvh;
   height: 100vh;
   transform: translateX(-100%);
   flex-direction: column;

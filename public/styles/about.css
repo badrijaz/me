@@ -5,6 +5,7 @@
   align-items: center;
   padding: 2rem;
   overflow: hidden; /* Because of the signature */
+  height: 100dvh;
   height: 100vh;
   width: 100vw;
   background-color: var(--color-background);
