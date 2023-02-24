@@ -19,6 +19,11 @@
   animation: slide-out 500ms var(--curve) forwards;
 }
 
+.intro h1 {
+  position: relative;
+  z-index: 1;
+}
+
 .intro p {
   font-weight: 400;
   color: var(--color-text-secondary);
@@ -33,6 +38,7 @@
   opacity: 0.15;
   stroke-dasharray: 730;
   width: 100%;
+  z-index: 0;
   scale: 2;
   animation: write-signature 5s ease-out forwards;
 }
