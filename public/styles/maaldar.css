@@ -62,6 +62,12 @@
   width: 15px;
   height: 15px;
   fill: red;
+  transform: rotate(0deg);
+  transition: transform 200ms ease-in-out;
+}
+
+.discord-container-category img.rotate {
+  transform: rotate(-90deg);
 }
 
 .discord-container-category p {
@@ -87,6 +93,10 @@
   margin-left: 2rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.discord-container-vc.hide {
+  display: none;
 }
 
 .discord-container-vc img {
