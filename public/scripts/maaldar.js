@@ -1,8 +1,9 @@
 const categoryContainer = document.getElementById("category");
 const categoryArrow = document.getElementById("category-arrow");
 const categoryVC = document.getElementById("category-vc");
+const myVC = document.getElementById("my-vc");
 
-let joiningVc = false;
+let joinedVc = false;
 
 const categoryVcInnerHTML = categoryVC.innerHTML;
 const userInVc = `<div class="vc-users">
@@ -17,13 +18,15 @@ categoryContainer.addEventListener("click", (event) => {
 });
 
 categoryVC.addEventListener("click", (event) => {
-  if (joiningVc) return
+  if (joinedVc) return;
 
-  joiningVc = true;
+  joinedVc = true;
   categoryVC.innerHTML += userInVc;
+  categoryVC.style.cursor = "not-allowed";
 
   setTimeout(() => {
     categoryVC.innerHTML = categoryVcInnerHTML;
-    joiningVc = false;
+
+    myVC.style.display = "block";
   }, 200);
 });
