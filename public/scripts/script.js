@@ -9,12 +9,27 @@ let previousNavigation = null
 
 const aboutSection = document.querySelector(".about")
 const projectsSection = document.querySelector(".projects")
+const maaldarSection = document.querySelector(".maaldar")
 const contactSection = document.querySelector(".contact")
 
 const sections = {
   about: aboutSection,
   projects: projectsSection,
+  maaldar: maaldarSection,
   contact: contactSection,
+}
+
+function hideSections() {
+  setTimeout(() => {
+    document.body.style.opacity = 1;
+  }, 100);
+
+  for (const section of Object.keys(sections)) {
+    if (section === "about") continue;
+
+    sections[section].classList.toggle("hidden", true)
+    sections[section].classList.toggle("active", false)
+  }
 }
 
 function navigate(navigation) {
@@ -33,13 +48,16 @@ function toggleSection() {
   if (sections[currentNavigation.id].classList.contains("active"))
     return
 
-  const activeSection = sections[currentNavigation.id]
-  activeSection.classList.toggle("active", true)
-  activeSection.classList.toggle("hidden", false)
+  for (const section of Object.keys(sections)) {
+    if (section === currentNavigation.id) {
+      sections[section].classList.toggle("hidden", false)
+      sections[section].classList.toggle("active", true)
+      continue
+    }
 
-  const hiddenSection = sections[previousNavigation.id]
-  hiddenSection.classList.toggle("hidden", true)
-  hiddenSection.classList.toggle("active", false)
+    sections[section].classList.toggle("hidden", true)
+    sections[section].classList.toggle("active", false)
+  }
 }
 
 /* Send button */

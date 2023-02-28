@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/maaldar.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <script
@@ -28,7 +29,7 @@
     </script>
     <script defer src="./scripts/script.js"></script>
   </head>
-  <body>
+  <body style="opacity: 0" onload="hideSections()">
     <nav>
       <ul>
         <li id="about" onclick="navigate(this)" class="link active">
@@ -56,16 +57,15 @@
     </main>
     <section class="projects">
       <div>
-        <a href="https://github.com/azure-badr/maaldar" target="_blank">
-          <div class="project">
-            <h1>Maaldar</h1>
-            <img class="link" src="./images/link.svg" />
-            <p>
-              a discord bot that gives nitro boosters for your server members a
-              custom identity.
-            </p>
-          </div>
-        </a>
+        <div id="maaldar" class="project" onclick="navigate(this)">
+          <h1>Maaldar</h1>
+          <img class="link" src="./images/link.svg" />
+          <p>
+            a discord bot that gives nitro boosters for your server members a
+            custom identity.
+          </p>
+          <p style="cursor: pointer"><b>🡒</b> click for demo</p>
+        </div>
         <a href="https://github.com/badrijaz/homenet" target="_blank">
           <div class="project">
             <h1>HomeNet</h1>
@@ -137,6 +137,17 @@
           <input type="submit" class="form-button" value="send" />
         </form>
         <div class="sent"></div>
+      </div>
+    </section>
+    <section class="maaldar">
+      <div class="project">
+        <h1>Maaldar</h1>
+        <img class="link" src="./images/link.svg" />
+        <p>
+          a discord bot that gives nitro boosters for your server members a
+          custom identity.
+        </p>
+        <p style="cursor: pointer"><b>🡒</b> click for demo</p>
       </div>
     </section>
   </body>

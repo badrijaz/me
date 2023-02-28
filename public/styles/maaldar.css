@@ -1,0 +1,22 @@
+.maaldar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  height: 100vh;
+  transform: translateX(-100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-backgrorund);
+}
+
+.maaldar.active {
+  animation: slide-in 500ms var(--curve) forwards;
+}
+
+.maaldar.hidden {
+  animation: slide-out 500ms var(--curve) forwards;
+}
