@@ -114,6 +114,11 @@
   margin-left: 0.5rem;
 }
 
+.vc-users {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
