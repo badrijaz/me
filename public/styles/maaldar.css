@@ -61,6 +61,7 @@
 .discord-container-category img {
   width: 15px;
   height: 15px;
+  fill: red;
 }
 
 .discord-container-category p {
@@ -75,6 +76,11 @@
 
 .discord-container p:hover {
   color: var(--color-text-discord-hover);
+}
+
+:is(.discord-container-category, .discord-container-vc):hover img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(2%)
+    hue-rotate(236deg) brightness(105%) contrast(100%);
 }
 
 .discord-container-vc {
