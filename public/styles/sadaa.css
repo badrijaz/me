@@ -89,7 +89,7 @@
   color: var(--color-text-discord-hover);
 }
 
-:is(.discord-container-category, .discord-container-vc):hover img {
+:is(.category, .category-vc):hover img {
   filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(2%)
     hue-rotate(236deg) brightness(105%) contrast(100%);
 }
@@ -122,6 +122,10 @@
 .vc-users {
   margin-top: 1rem;
   margin-left: 1rem;
+}
+
+#my-vc.hide {
+  display: none !important;
 }
 
 @keyframes fade-in {
