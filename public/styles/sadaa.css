@@ -97,7 +97,14 @@
 .discord-container-vc {
   margin-left: 2rem;
   margin-top: 1rem;
+  margin-right: 0.2rem;
   cursor: pointer;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.discord-container-vc:hover {
+  background-color: var(--color-category-hover);
 }
 
 .discord-container-vc.hide {
