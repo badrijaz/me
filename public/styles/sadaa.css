@@ -1,4 +1,4 @@
-.maaldar {
+.sadaa {
   display: flex;
   position: absolute;
   top: 0;
@@ -14,16 +14,16 @@
   background-color: var(--color-backgrorund);
 }
 
-.maaldar.active {
+.sadaa.active {
   z-index: 1;
   animation: fade-in 500ms var(--curve) forwards;
 }
 
-.maaldar.hidden {
+.sadaa.hidden {
   animation: fade-out 200ms var(--curve) forwards;
 }
 
-.maaldar-container {
+.sadaa-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@
   padding: 0 1rem;
 }
 
-.maaldar-container h1 {
+.sadaa-container h1 {
   font-size: 2rem;
   color: var(--color-text-primary);
   margin-bottom: 1rem;

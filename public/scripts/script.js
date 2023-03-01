@@ -9,13 +9,13 @@ let previousNavigation = null
 
 const aboutSection = document.querySelector(".about")
 const projectsSection = document.querySelector(".projects")
-const maaldarSection = document.querySelector(".maaldar")
+const sadaaSection = document.querySelector(".sadaa")
 const contactSection = document.querySelector(".contact")
 
 const sections = {
   about: aboutSection,
   projects: projectsSection,
-  maaldar: maaldarSection,
+  sadaa: sadaaSection,
   contact: contactSection,
 }
 

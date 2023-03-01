@@ -49,17 +49,17 @@
   animation: slide-out 500ms var(--curve) forwards;
 }
 
-.maaldar-project {
+.sadaa-project {
   cursor: pointer;
 }
 
-.maaldar-project p:last-child {
+.sadaa-project p:last-child {
   position: relative;
   left: 0;
   transition: left 200ms ease-out;
 }
 
-.maaldar-project:hover p:last-child {
+.sadaa-project:hover p:last-child {
   font-weight: bold;
   left: 0.5rem;
 }

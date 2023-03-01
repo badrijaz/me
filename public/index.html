@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/projects.css" />
-    <link rel="stylesheet" href="./styles/maaldar.css" />
+    <link rel="stylesheet" href="./styles/sadaa.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <script
@@ -28,7 +28,7 @@
       })();
     </script>
     <script defer src="./scripts/script.js"></script>
-    <script defer src="./scripts/maaldar.js"></script>
+    <script defer src="./scripts/sadaa.js"></script>
   </head>
   <body style="opacity: 0" onload="hideSections()">
     <nav>
@@ -58,20 +58,16 @@
     </main>
     <section class="projects">
       <div>
-        <div
-          id="maaldar"
-          class="project maaldar-project"
-          onclick="navigate(this)"
-        >
-          <h1>Maaldar</h1>
-          <p>
-            a discord bot that gives nitro boosters for your server members a
-            custom identity.
-          </p>
-          <p>
-            <span><b>🡒</b></span> click for demo
-          </p>
-        </div>
+        <a href="https://github.com/azure-badr/Maaldar" target="_blank">
+          <div class="project">
+            <h1>Maaldar</h1>
+            <img class="link" src="./images/link.svg" />
+            <p>
+              a discord bot that gives nitro boosters for your server members a
+              custom identity.
+            </p>
+          </div>
+        </a>
         <a href="https://github.com/badrijaz/homenet" target="_blank">
           <div class="project">
             <h1>HomeNet</h1>
@@ -82,13 +78,13 @@
             </p>
           </div>
         </a>
-        <a href="https://github.com/azure-badr/sadaa" target="_blank">
-          <div class="project">
-            <h1>Sadaa</h1>
-            <img class="link" src="./images/link.svg" />
-            <p>a discord bot for managing custom voice channels.</p>
-          </div>
-        </a>
+        <div id="sadaa" class="project sadaa-project" onclick="navigate(this)">
+          <h1>Sadaa</h1>
+          <p>a discord bot for managing custom voice channels.</p>
+          <p>
+            <span><b>🡒</b></span> click for demo
+          </p>
+        </div>
         <a href="https://wallstreeting.web.app" target="_blank">
           <div class="project">
             <h1>Wallstreet bij ING</h1>
@@ -145,8 +141,8 @@
         <div class="sent"></div>
       </div>
     </section>
-    <section class="maaldar">
-      <div class="maaldar-container">
+    <section class="sadaa">
+      <div class="sadaa-container">
         <h1>so imagine you're on discord</h1>
         <div class="discord-container">
           <div id="category" class="discord-container-category">
