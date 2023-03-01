@@ -22,6 +22,7 @@ categoryVC.addEventListener("click", (event) => {
 
   joinedVc = true;
   categoryVC.innerHTML += userInVc;
+  categoryVC.classList.toggle("joined")
   categoryVC.style.cursor = "not-allowed";
 
   setTimeout(() => {
