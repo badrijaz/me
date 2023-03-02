@@ -151,13 +151,18 @@
           </div>
           <div id="category-vc" class="discord-container-vc">
             <div class="vc-image-container">
-              <img class="vc-lock" src="./images/lock.svg" alt="lock" />
               <img class="vc-image" src="./images/speaker.svg" alt="arrow" />
             </div>
             <p>join to create</p>
           </div>
           <div style="display: none" id="my-vc" class="discord-container-vc">
             <div class="vc-image-container">
+              <img
+                class="vc-lock"
+                id="vc-lock"
+                src="./images/lock.svg"
+                alt="lock"
+              />
               <img class="vc-image" src="./images/speaker.svg" alt="arrow" />
             </div>
             <p>Badr's VC</p>
@@ -169,8 +174,8 @@
             </div>
           </div>
           <div class="control">
-            <button>🔒 Lock</button>
-            <button>🔓 Unlock</button>
+            <button onclick="lock()">🔒 Lock</button>
+            <button onclick="unlock()">🔓 Unlock</button>
             <button>✏️ Set name</button>
             <button>🔢 Set limit</button>
             <button>🌏 Set region</button>

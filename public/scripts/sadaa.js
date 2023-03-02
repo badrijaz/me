@@ -46,3 +46,12 @@ categoryVC.addEventListener("click", (event) => {
     myVC.style.display = "block";
   }, 200);
 });
+
+const vcLock = document.getElementById("vc-lock");
+function lock() {
+  vcLock.classList.add("show");
+}
+
+function unlock() {
+  vcLock.classList.remove("show");
+}
