@@ -187,7 +187,8 @@
   border: solid 1px var(--color-text-discord);
   font-size: 1rem;
   font-weight: bold;
-  cursor: pointer;
+  cursor: not-allowed;
+  opacity: 0.5;
   transition: background-color 200ms ease-in-out;
 }
 

@@ -3,6 +3,9 @@ const categoryArrow = document.getElementById("category-arrow");
 const categoryVC = document.getElementById("category-vc");
 const myVC = document.getElementById("my-vc");
 
+const lockButton = document.getElementById("lock-button");
+const unlockButton = document.getElementById("unlock-button");
+
 let joinedVc = false;
 
 const categoryVcInnerHTML = categoryVC.innerHTML;
@@ -32,6 +35,7 @@ categoryContainer.addEventListener("click", (event) => {
   categoryContainer.removeChild(collapsedCategoryDiv);
 });
 
+// Join VC Button
 categoryVC.addEventListener("click", (event) => {
   if (joinedVc) return;
 
@@ -39,6 +43,12 @@ categoryVC.addEventListener("click", (event) => {
   categoryVC.innerHTML += userInVc;
   categoryVC.classList.toggle("joined")
   categoryVC.style.cursor = "not-allowed";
+
+  lockButton.style.opacity = 1;
+  unlockButton.style.opacity = 1;
+
+  lockButton.style.cursor = "pointer";
+  unlockButton.style.cursor = "pointer";
 
   setTimeout(() => {
     categoryVC.innerHTML = categoryVcInnerHTML;
