@@ -119,6 +119,19 @@
   height: 20px;
 }
 
+.vc-image-container {
+  position: relative;
+  display: inline;
+}
+
+.vc-lock {
+  position: absolute !important;
+  top: -10px !important;
+  right: -2px;
+  width: 10px !important;
+  height: 10px !important;
+}
+
 .discord-container-vc p {
   display: inline;
   font-size: 1rem;
