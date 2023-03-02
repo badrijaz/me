@@ -114,9 +114,9 @@
 
 .discord-container-vc img {
   position: relative;
-  top: 0.2rem;
-  width: 20px;
-  height: 20px;
+  top: 0.12rem;
+  width: 16px;
+  height: 16px;
 }
 
 .vc-image-container {
@@ -152,7 +152,7 @@
   font-size: 1rem;
   font-weight: bold;
   color: var(--color-text-discord);
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
 }
 
 .vc-users {
