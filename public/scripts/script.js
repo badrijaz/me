@@ -1,3 +1,16 @@
+/* About section font animation and hide sections */
+const introName = document.getElementById("intro-name");
+document.body.onload = () => {
+  hideSections();
+
+  const introNameSpans = Array.from(introName.children);
+  introNameSpans.forEach((child, index) => {
+    setTimeout(() => {
+      child.classList.add("font-animation");
+    }, 200 * index);
+  });
+};
+
 const SLIDING_AWAY_DURATION = 500
 
 const aboutNavigation = document.getElementById("about")

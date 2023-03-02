@@ -21,16 +21,29 @@
 
 .intro h1 {
   position: relative;
+  font-weight: 100;
   z-index: 1;
 }
 
 .intro p {
-  font-weight: 400;
   color: var(--color-text-secondary);
 }
 
 .intro {
   position: relative;
+}
+
+.font-animation {
+  animation: font-animation 1s ease-out forwards;
+}
+
+@keyframes font-animation {
+  0% {
+    font-weight: 100;
+  }
+  100% {
+    font-weight: 700;
+  }
 }
 
 .signature {
