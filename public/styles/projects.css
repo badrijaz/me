@@ -56,7 +56,7 @@
 .sadaa-project p:last-child {
   position: relative;
   left: 0;
-  transition: left 200ms ease-out;
+  transition: left 200ms ease-out, font-weight 200ms ease-out;
 }
 
 .sadaa-project:hover p:last-child {
