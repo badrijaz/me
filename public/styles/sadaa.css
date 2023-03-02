@@ -185,8 +185,6 @@
   padding: 0.5rem 1rem;
   color: var(--color-text-discord);
   border: solid 1px var(--color-text-discord);
-  font-size: 1rem;
-  font-weight: bold;
   cursor: not-allowed;
   opacity: 0.5;
   transition: background-color 200ms ease-in-out;
@@ -195,6 +193,15 @@
 .control button:hover {
   background-color: var(--color-control-background);
 }
+
+.control button p {
+  font-size: 1rem;
+  font-weight: bold;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(36%) saturate(644%)
+    hue-rotate(131deg) brightness(97%) contrast(100%);
+}
+
+/* Change color text of button through filter */
 
 /* Change control scroll */
 .control::-webkit-scrollbar {
@@ -207,6 +214,26 @@
   background-color: var(--color-control-scrollbar);
   height: 1rem;
   border-radius: 0.5rem;
+}
+
+.sadaa-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.sadaa-description a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.sadaa-description a:hover {
+  color: var(--color-text-selected);
 }
 
 @keyframes fade-in {
