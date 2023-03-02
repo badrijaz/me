@@ -63,3 +63,8 @@
   font-weight: bold;
   left: 0.5rem;
 }
+
+.right-arrow {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(11%) saturate(3006%)
+    hue-rotate(168deg) brightness(81%) contrast(68%);
+}
