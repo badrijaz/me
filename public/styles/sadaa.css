@@ -167,6 +167,19 @@
   background-color: var(--color-control-background);
 }
 
+/* Change control scroll */
+.control::-webkit-scrollbar {
+  height: 1rem;
+  background-color: var(--color-discord-container);
+  border-radius: 1rem;
+}
+
+.control::-webkit-scrollbar-thumb {
+  background-color: var(--color-control-scrollbar);
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
