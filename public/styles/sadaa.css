@@ -40,6 +40,7 @@
 }
 
 .discord-container {
+  position: relative;
   margin-top: 1rem;
   color: var(--color-text-primary);
   background-color: var(--color-discord-container);
@@ -133,6 +134,37 @@
 
 #my-vc.hide {
   display: none !important;
+}
+
+.control {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  overflow-x: scroll;
+  background-color: var(--color-control-background);
+  border-radius: 0.5rem;
+}
+
+.control button {
+  background-color: var(--color-discord-container);
+  flex-shrink: 0;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--color-text-discord);
+  border: solid 1px var(--color-text-discord);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.control button:hover {
+  background-color: var(--color-control-background);
 }
 
 @keyframes fade-in {
