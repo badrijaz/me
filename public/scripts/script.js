@@ -35,14 +35,16 @@ const sections = {
 function hideSections() {
   setTimeout(() => {
     document.body.style.opacity = 1;
+  }, 200);
 
+  setTimeout(() => {
     for (const section of Object.keys(sections)) {
       if (section === "about") continue;
 
       sections[section].classList.toggle("hidden", true)
       sections[section].classList.toggle("active", false)
     }
-  }, 100);
+  }, 100)
 }
 
 function navigate(navigation) {
