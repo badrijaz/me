@@ -59,6 +59,13 @@ function navigate(navigation) {
 function toggleSection() {
   if (previousNavigation === currentNavigation) return;
 
+  // If project section, toggle overflow
+  if (currentNavigation.id === "projects") {
+    document.body.classList.toggle("overflow", true)
+  } else {
+    document.body.classList.toggle("overflow", false)
+  }
+
   // If already active, do not do anything
   if (sections[currentNavigation.id].classList.contains("active"))
     return
